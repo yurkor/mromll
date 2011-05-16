@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ml</groupId>
+  <artifactId>MtlTransducer</artifactId>
+  <version>1.2</version>
+  <description>
+      Thirdparty JAPE transducer(interpete of JAPE grammars used in GATE)
+      official site:http://rali.iro.umontreal.ca/MTLTransducer/
+      this jar was taken from GATE 4.0 distribution
+  </description>
+</project>

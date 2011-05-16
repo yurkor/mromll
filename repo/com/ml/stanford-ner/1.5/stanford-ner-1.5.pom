@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ml.src</groupId>
+	<artifactId>stanford-ner</artifactId>
+	<name>stanford-ner library</name>
+	<version>1.5</version>
+	<packaging>jar</packaging>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<outputDirectory>classes</outputDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<property name="build.compiler" value="extJavac"/>
+								<property name="java.home" value="${java.home}"/>
+								<property name="java.version" value="${java.version}"/>
+								<ant target="jar"/>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>package</id>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<copy overwrite="true" file="stanford-ner.jar"
+								      tofile="${project.build.directory}/${project.build.finalName}.${packaging}"/>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+
+						<id>clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<!-- without passing this properties icu4j fails to build -->
+								<property name="java.home" value="${java.home}"/>
+								<property name="java.version" value="${java.version}"/>
+
+								<ant target="clean"/>
+							</tasks>
+						</configuration>
+					</execution>
+
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

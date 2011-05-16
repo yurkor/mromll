@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ml.gate</groupId>
+  <artifactId>gate</artifactId>
+  <version>4.0</version>
+  <description>POM was created from install:install-file</description>
+  <dependencies>
+       <dependency>
+           <groupId>pdfbox</groupId>
+           <artifactId>pdfbox</artifactId>
+           <version>0.7.3</version>
+      </dependency>
+      <dependency>
+          <groupId>stax</groupId>
+          <artifactId>stax-api</artifactId>
+          <version>1.0.1</version>
+     </dependency>
+     <dependency>
+         <groupId>org.eclipse.jdt</groupId>
+         <artifactId>core</artifactId>
+         <version>3.2.0.666</version>
+     </dependency>
+<!--  it's used only for xml serialization so we doesn't need it in production. But it case troubles while building Km-modules so was commented
+     <dependency>
+          <groupId>com.ml</groupId>
+          <artifactId>wstx</artifactId>
+          <version>2.0.6</version>
+     </dependency>
+-->     
+  </dependencies>        
+
+</project>

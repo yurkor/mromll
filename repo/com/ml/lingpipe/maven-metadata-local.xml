@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+  <groupId>com.mlcom.ml</groupId>
+  <artifactId>lingpipe</artifactId>
+  <version>3.2.0-SNAPSHOT</version>
+  <versioning>
+    <versions>
+      <version>3.2.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20080816105638</lastUpdated>
+  </versioning>
+</metadata>
